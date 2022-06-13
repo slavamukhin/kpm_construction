@@ -1,0 +1,6 @@
+export { Header } from './Heder'
+export { Main } from './Main'
+export { Tiling } from './Tiling'
+export { Services } from './Services'
+export { Comparison } from './Comparison'
+export { Contact } from './Contact'

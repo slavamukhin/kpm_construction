@@ -1,26 +1,21 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Block } from './layout';
+import GlobalCSS from './global.css'
+import { ContentPosition } from './layout/types';
+import { Header, Main, Tiling, Services, Comparison, Contact } from './components';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+      <GlobalCSS />
+      <Block children={<Header />} contentPosition={ContentPosition.CENTER} backgroundColor='#22252b' header/>
+      <Block children={<Main />} contentPosition={ContentPosition.CENTER} backgroundUrl={require('./img/plumbing.jpg')}/>
+      <Block children={<Services />} contentPosition={ContentPosition.CENTER} backgroundColor='#f5f5f5'/>
+      <Block children={<Tiling />} contentPosition={ContentPosition.END} backgroundUrl={require('./img/tiling.jpg')} backgroundPosition="-200px 0"/>
+      <Block children={<Comparison />} contentPosition={ContentPosition.CENTER}/>
+      <Block children={<Contact />} contentPosition={ContentPosition.START} backgroundUrl={require('./img/owner.jpg')} backgroundPosition="200px 0"/>
+      <Block children={<Header />} contentPosition={ContentPosition.CENTER} backgroundColor='#22252b'/>
+    </>
+  )
 }
 
 export default App;

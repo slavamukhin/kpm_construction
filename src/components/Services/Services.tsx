@@ -63,12 +63,12 @@ const ServiceCardWrapper = styled.div`
 const ServicesWrapper = styled.div`
   width: 100%;
   text-align: center;
-  margin: 120px 0 120px 0;
+  margin: 120px 0 100px 0;
 `
 
 export const Services: FC = () => {
   return <ServicesWrapper>
-    <Caption text="What are your needs?" fontSize="57px" color='#232a34' fontWeight="600" margin="0 0 40px 0"/>
+    <Caption main text="What are your needs?" fontSize="57px" color='#232a34' fontWeight="600" margin="0 0 40px 0"/>
     <ServiceCardWrapper>
       {servicesCard.map(({id, title, text, img}: ServicesCard): ReactElement<typeof ServiceCard> => <ServiceCard key={id} title={title} text={text} img={img} />)}
     </ServiceCardWrapper>

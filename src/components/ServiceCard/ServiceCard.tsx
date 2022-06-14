@@ -10,9 +10,35 @@ type ServiceCardProps = Pick<ServicesCard, 'title' | 'text' | 'img'>
 const ServiceCardWrapper = styled.div`
   width: 32%;
   box-shadow: 0 3px 60px rgb(0 0 0 / 4%);
-  padding: 0 20px 20px 0;
+  padding: 0 20px 40px 0;
+
   &:nth-child(3n) {
     padding-right: 0;
+  }
+
+  @media (max-width: 1130px) {
+    width: 40%;
+
+    &:nth-child(3n) {
+      padding: 0 20px 40px 0;
+    }
+
+    &:nth-child(2n) {
+      padding-right: 0;
+    }
+  }
+
+  @media (max-width: 915px) {
+    width: 46%;
+  }
+
+  @media (max-width: 805px) {
+    width: 90%;
+    padding-right: 0;
+  }
+
+  @media (max-width: 430px) {
+    padding-bottom: 20px;
   }
 `
 
@@ -20,6 +46,7 @@ const Image = styled.img`
   height: 315px;
   width: 100%;
   display: inherit;
+  object-fit: cover;
 `
 
 const ServiceCardContentWrapper = styled.div`

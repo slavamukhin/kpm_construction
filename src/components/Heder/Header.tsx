@@ -1,7 +1,7 @@
 import { FC } from "react"
 import styled from "styled-components"
 import { Logo } from "../Logo"
-import { Phone } from "../Phone"
+import { ContactInfo } from "../ContactInfo"
 
 const HeaderWrapper = styled.div`
   display: flex;
@@ -13,6 +13,6 @@ const HeaderWrapper = styled.div`
 export const Header: FC = () => {
   return <HeaderWrapper>
     <Logo />
-    <Phone />
+    <ContactInfo />
   </HeaderWrapper>
 }

@@ -4,6 +4,7 @@ import { ContentProps } from "../types"
 
 const ContentWrapper = styled.div<ContentProps>`
   width: 1290px;
+  min-width: 320px;
   padding: 0 20px;
   display: flex;
   justify-content: ${({contentPosition}) => contentPosition};

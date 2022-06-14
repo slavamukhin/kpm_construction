@@ -16,7 +16,7 @@ const BlockWrapper = styled.div<BlockWrapperProps>`
     right: 0;
     left: 0;
     opacity: .8;
-    z-index: 1;
+    z-index: 2;
   ` : ``}
 `
 

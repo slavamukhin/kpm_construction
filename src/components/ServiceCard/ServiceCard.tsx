@@ -10,6 +10,10 @@ type ServiceCardProps = Pick<ServicesCard, 'title' | 'text' | 'img'>
 const ServiceCardWrapper = styled.div`
   width: 32%;
   box-shadow: 0 3px 60px rgb(0 0 0 / 4%);
+  padding: 0 20px 20px 0;
+  &:nth-child(3n) {
+    padding-right: 0;
+  }
 `
 
 const Image = styled.img`

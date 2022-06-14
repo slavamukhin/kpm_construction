@@ -32,13 +32,32 @@ const servicesCard: Array<ServicesCard> = [
     title: 'For Basement',
     text: 'Not only do we have premium products and fixtures, but our store also offers installation services.',
     img: Basement
+  },
+  {
+    id: 4,
+    title: 'For Pool',
+    text: 'Not only do we have premium products and fixtures, but our store also offers installation services.',
+    img: Bathrooms
+  },
+  {
+    id: 5,
+    title: 'For Decking',
+    text: 'Not only do we have premium products and fixtures, but our store also offers installation services.',
+    img: Kitchen
+  },
+  {
+    id: 6,
+    title: 'For Deck',
+    text: 'Not only do we have premium products and fixtures, but our store also offers installation services.',
+    img: Basement
   }
 ]
 
 const ServiceCardWrapper = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
 `
 
 const ServicesWrapper = styled.div`

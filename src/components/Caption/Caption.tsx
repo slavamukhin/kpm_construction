@@ -23,6 +23,14 @@ const CaptionWrapper = styled.div<CaptionWrapperProps>`
   letter-spacing: -1px;
   font-weight: ${({fontWeight}) => fontWeight ? fontWeight : '400'};
 
+  @media (max-width: 1100px) {
+    font-size: 23px;
+  }
+
+  @media (max-width: 720px) {
+    font-size: 22px;
+  }
+
   ${({main}) => main ? `
 
     @media (max-width: 1200px) {

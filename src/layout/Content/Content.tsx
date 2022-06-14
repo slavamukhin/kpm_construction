@@ -8,6 +8,10 @@ const ContentWrapper = styled.div<ContentProps>`
   padding: 0 20px;
   display: flex;
   justify-content: ${({contentPosition}) => contentPosition};
+
+  @media (max-width: 430px) {
+    padding: 0 10px;
+  }
 `
 
 export const Content: FC<ContentProps> = ({ children, contentPosition }) => {

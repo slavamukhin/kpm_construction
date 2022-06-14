@@ -7,6 +7,10 @@ const TextWrapper = styled.div`
   margin: 20px 0;
   letter-spacing 0.1px;
   line-height 29.16px;
+
+  @media (max-width: 720px) {
+    font-size: 16px;
+  }
 `
 
 interface TextProps {

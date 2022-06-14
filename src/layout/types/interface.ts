@@ -9,6 +9,8 @@ export interface BlockProps {
   backgroundUrl?: string
   header?: boolean
   backgroundPosition?: string
+  left?: boolean
+  right?: boolean
 }
 
 export type ContentProps = Pick<BlockProps, 'children' | 'contentPosition'>

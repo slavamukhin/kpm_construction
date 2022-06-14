@@ -35,10 +35,15 @@ const ServiceCardWrapper = styled.div`
   @media (max-width: 805px) {
     width: 90%;
     padding-right: 0;
+
   }
 
   @media (max-width: 430px) {
     padding-bottom: 20px;
+    width: 100%;
+    &:nth-child(3n) {
+      padding-right: 0;
+    }
   }
 `
 

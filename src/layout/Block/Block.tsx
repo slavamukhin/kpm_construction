@@ -18,11 +18,49 @@ const BlockWrapper = styled.div<BlockWrapperProps>`
     opacity: .8;
     z-index: 2;
   ` : ``}
+  ${({left}) => left ? `
+
+    @media (max-width: 1120px) {
+      background-position: -270px 0;
+    }
+
+    @media (max-width: 940px) {
+      background-position: -370px 0;
+    }
+
+    @media (max-width: 840px) {
+      background-position: -470px 0;
+    }
+
+    @media (max-width: 720px) {
+      background: none;
+    }
+  ` : ''}
+  ${({right}) => right ? `
+
+  ` : ''}
 `
 
-export const Block: FC<BlockProps> = ({ children, contentPosition, backgroundColor, backgroundUrl, header, backgroundPosition }) => {
+export const Block: FC<BlockProps> = (
+  { 
+    children, 
+    contentPosition, 
+    backgroundColor, 
+    backgroundUrl, 
+    header, 
+    backgroundPosition, 
+    left, 
+    right 
+  }) => {
   return (
-    <BlockWrapper backgroundColor={backgroundColor} backgroundUrl={backgroundUrl} header={header} backgroundPosition={backgroundPosition}>
+    <BlockWrapper 
+      backgroundColor={backgroundColor} 
+      backgroundUrl={backgroundUrl} 
+      header={header} 
+      backgroundPosition={backgroundPosition} 
+      left={left} 
+      right={right}
+    >
       <Content contentPosition={contentPosition}>
         {children}
       </Content>

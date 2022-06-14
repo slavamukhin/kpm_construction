@@ -38,6 +38,17 @@ const BlockWrapper = styled.div<BlockWrapperProps>`
   ` : ''}
   ${({right}) => right ? `
 
+    @media (max-width: 880px) {
+      background-position: -170px 0;
+    }
+
+    @media (max-width: 740px) {
+      background-position: -260px 0;
+    }
+
+    @media (max-width: 720px) {
+      background: none;
+    }
   ` : ''}
 `
 

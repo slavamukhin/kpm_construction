@@ -12,7 +12,7 @@ function App() {
       <Block children={<Services />} contentPosition={ContentPosition.CENTER} backgroundColor='#f5f5f5'/>
       <Block children={<Tiling />} contentPosition={ContentPosition.END} backgroundUrl={require('./img/tiling.jpg')} backgroundPosition="-200px 0" left />
       <Block children={<Comparison />} contentPosition={ContentPosition.CENTER}/>
-      <Block children={<Contact />} contentPosition={ContentPosition.START} backgroundUrl={require('./img/owner.jpg')} backgroundPosition="200px 0"/>
+      <Block children={<Contact />} contentPosition={ContentPosition.START} backgroundUrl={require('./img/owner.jpg')} right />
       <Block children={<MyWork />} contentPosition={ContentPosition.CENTER} />
       <Block children={<Header />} contentPosition={ContentPosition.CENTER} backgroundColor='#22252b'/>
     </>

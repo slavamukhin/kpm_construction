@@ -44,6 +44,9 @@ const ServiceCardWrapper = styled.div`
     &:nth-child(3n) {
       padding-right: 0;
     }
+    &:last-child {
+      padding-bottom: 0;
+    }
   }
 `
 

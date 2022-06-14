@@ -3,6 +3,7 @@ import styled from "styled-components"
 import { Button } from "../Button"
 import { Caption } from "../Caption"
 import { Text } from "../Text"
+import { content } from "../../content";
 
 const ContactWrapper = styled.div`
   margin: 120px 0;
@@ -16,8 +17,8 @@ const ContactWrapper = styled.div`
 
 export const Contact: FC = () => {
   return <ContactWrapper>
-    <Caption main text='Innovative Approach' fontSize="57px" color='#232a34' fontWeight="600"/>
-    <Text text='Professional installation is key to the impeccable functioning of your pipes, faucets and heaters. Let us take care of the issues in your homes and offices today.' />
-    <Button text='Contact Us' href="https://wa.me/16476884085?text="/>
+    <Caption main text={content.contact.title} fontSize="57px" color='#232a34' fontWeight="600"/>
+    <Text text={content.contact.text} />
+    <Button text={content.contact.button} href="https://wa.me/16476884085?text="/>
   </ContactWrapper>
 }

@@ -4,10 +4,8 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import slide1 from '../../img/after.jpg'
-import slide3 from '../../img/before.jpg'
-import slide2 from '../../img/plumbing.jpg'
 import styled from "styled-components";
+import { content } from "../../content";
 
 const MySwiper = styled(Swiper)`
   width: 100%;
@@ -40,14 +38,7 @@ export const Slider: FC = () => {
         navigation={true}
         modules={[Pagination, Navigation]}
       >
-        <SwiperSlide><img src={slide1} alt='slide'/></SwiperSlide>
-        <SwiperSlide><img src={slide3} alt='slide'/></SwiperSlide>
-        <SwiperSlide><img src={slide1} alt='slide'/></SwiperSlide>
-        <SwiperSlide><img src={slide2} alt='slide'/></SwiperSlide>
-        <SwiperSlide><img src={slide1} alt='slide'/></SwiperSlide>
-        <SwiperSlide><img src={slide3} alt='slide'/></SwiperSlide>
-        <SwiperSlide><img src={slide1} alt='slide'/></SwiperSlide>
-        <SwiperSlide><img src={slide3} alt='slide'/></SwiperSlide>
+        {content.myWork.sliders.map(slide => <SwiperSlide><img src={slide} alt='slide'/></SwiperSlide>)}
       </MySwiper>
   </div>
 }

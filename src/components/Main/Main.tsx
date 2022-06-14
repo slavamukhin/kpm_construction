@@ -1,5 +1,6 @@
 import { FC } from "react";
 import styled from "styled-components";
+import { content } from "../../content";
 import { Button } from "../Button";
 import { Caption } from "../Caption";
 
@@ -24,8 +25,8 @@ const MainWrapper = styled.div`
 
 export const Main: FC = () => {
   return <MainWrapper>
-    <Caption text='Pash Khoroshev Solution' fontSize="20px" submain/>
-    <Caption main text='New renovation technology for your bathroom, kitchen, basement, pool, decking, deck' width="100%" margin='0 0 110px' fontWeight="600" fontSize="57px"/>
-    <Button text='Text me in WhatsApp' href="https://wa.me/16476884085?text=" />
+    <Caption text={content.main.subTitle} fontSize="20px" submain/>
+    <Caption main text={content.main.title} width="100%" margin='0 0 110px' fontWeight="600" fontSize="57px"/>
+    <Button text={content.main.button} href="https://wa.me/16476884085?text=" />
   </MainWrapper>
 }

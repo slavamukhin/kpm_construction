@@ -2,6 +2,7 @@ import { FC } from "react"
 import styled from "styled-components"
 import { Slider } from '../Slider'
 import { Caption } from "../Caption"
+import { content } from "../../content"
 
 
 const MyWorkWrapper = styled.div`
@@ -28,7 +29,7 @@ const MyWorkWrapper = styled.div`
 
 export const MyWork: FC = () => {
   return <MyWorkWrapper>
-    <Caption main text="My Works" fontSize="57px" color='#232a34' fontWeight="600" margin="0 0 40px 0"/>
-    <Slider/>
+    <Caption main text={content.myWork.title} fontSize="57px" color='#232a34' fontWeight="600" margin="0 0 40px 0"/>
+    <Slider />
   </MyWorkWrapper>
 }

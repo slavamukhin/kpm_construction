@@ -1,9 +1,8 @@
 import { FC } from "react";
 import { Caption } from "../Caption";
 import ReactCompareImage from 'react-compare-image';
-import after from '../../img/after.jpg'
-import before from '../../img/before.jpg'
 import styled from "styled-components";
+import { content } from "../../content";
 
 const ComparisonWrapper = styled.div`
   margin: 120px 0 120px 0;
@@ -29,7 +28,7 @@ const ComparisonWrapper = styled.div`
 
 export const Comparison: FC = () => {
   return <ComparisonWrapper>
-    <Caption main text="Your bathroom will look like this..." fontSize="57px" color='#232a34' fontWeight="600" margin="0 0 40px 0"/>
-    <ReactCompareImage leftImageLabel='before' rightImageLabel="after" leftImage={after} rightImage={before} />;
+    <Caption main text={content.comparison.title} fontSize="57px" color='#232a34' fontWeight="600" margin="0 0 40px 0"/>
+    <ReactCompareImage leftImageLabel='before' rightImageLabel="after" leftImage={content.comparison.after} rightImage={content.comparison.before} />;
   </ComparisonWrapper>
 }
